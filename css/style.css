@@ -421,11 +421,3 @@ a:hover {
 }
 
 
-/* 모바일에서는 카드 1개씩 */
-@media (max-width: 700px) {
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
