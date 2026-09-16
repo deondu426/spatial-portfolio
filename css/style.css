@@ -342,3 +342,90 @@ a:hover {
   }
 
 }
+
+/* =========================
+   Study Notes 카드
+========================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.portfolio-card {
+  position: relative;
+
+  padding: 30px;
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 18px;
+
+  background: rgba(15, 23, 42, 0.7);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(94, 234, 212, 0.5);
+
+  background: rgba(17, 30, 50, 0.95);
+}
+
+.card-number {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #5eead4;
+}
+
+.portfolio-card h3 {
+  margin-bottom: 14px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.portfolio-card p {
+  min-height: 82px;
+
+  margin-bottom: 22px;
+
+  color: #94a3b8;
+}
+
+.portfolio-card a {
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #5eead4;
+}
+
+.portfolio-card a:hover {
+  color: #ffffff;
+}
+
+
+/* 모바일에서는 카드 1개씩 */
+@media (max-width: 700px) {
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
