@@ -428,3 +428,54 @@ a:hover {
   }
 
 }
+
+/* =========================
+   Projects 전용 카드
+========================= */
+
+.project-card {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+
+  align-items: center;
+
+  padding: 38px;
+}
+
+.project-card::after {
+  content: "GIS · MCDA · QGIS";
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 220px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(94, 234, 212, 0.08),
+      rgba(59, 130, 246, 0.08)
+    );
+
+  border: 1px solid rgba(94, 234, 212, 0.18);
+
+  color: #5eead4;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 800px) {
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+}
