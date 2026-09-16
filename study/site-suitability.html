@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <title>입지 적합성 분석 | 이선주 Portfolio</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="logo">LSJ<span>.</span></a>
+
+    <div class="nav-menu">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#study">Study</a>
+      <a href="../index.html#projects">Projects</a>
+    </div>
+  </nav>
+
+
+  <main class="detail-page">
+
+    <section>
+
+      <span class="card-number">STUDY 02</span>
+
+      <h1>입지 적합성 분석</h1>
+
+      <p>
+        GIS와 다기준 의사결정분석(MCDA)을 활용하여
+        특정 목적에 가장 적합한 공간을 평가하고 선정하는 방법을 정리한 페이지입니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>1. 입지 적합성 분석의 개념</h2>
+
+      <p>
+        입지 적합성 분석(Site Suitability Analysis)은 시설 건립,
+        토지이용 배치, 자원 개발 등 특정 목적에 가장 적합한 위치를 찾기 위해
+        여러 공간 대안을 다양한 평가 기준에 따라 비교하는 공간분석 방법입니다.
+      </p>
+
+      <p>
+        여러 공간적 특성과 평가 기준을 하나의 종합적인 평가값으로 통합하여
+        후보 지역 간 상대적인 적합도와 우선순위를 산출하는 것을 목표로 합니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2. 다기준 의사결정분석(MCDA)</h2>
+
+      <p>
+        MCDA(Multi-Criteria Decision Analysis)는 서로 다른 여러 평가 기준을
+        동시에 고려하여 대안의 우선순위를 결정하는 의사결정 방법론입니다.
+      </p>
+
+      <p>
+        GIS와 결합할 경우 접근성, 인구, 거리, 환경조건 등 공간 데이터를
+        하나의 적합도 값으로 통합하여 공간적 의사결정을 지원할 수 있습니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>3. 핵심 구성요소</h2>
+
+      <p>
+        입지 적합성 분석은 일반적으로 다음과 같은 요소로 구성됩니다.
+      </p>
+
+      <p>
+        <strong>평가기준(Criteria)</strong> :
+        입지 적합도를 평가하기 위해 사용하는 개별 지표입니다.
+      </p>
+
+      <p>
+        <strong>대안(Alternatives)</strong> :
+        분석 대상이 되는 지점, 구역 또는 격자 등의 공간 단위입니다.
+      </p>
+
+      <p>
+        <strong>가중치(Weight)</strong> :
+        각 평가기준이 최종 의사결정에 미치는 상대적 중요도를 나타냅니다.
+      </p>
+
+      <p>
+        <strong>제약조건(Constraint)</strong> :
+        특정 조건에 따라 후보지에서 제외해야 하는 공간을 의미합니다.
+      </p>
+
+      <p>
+        <strong>의사결정 규칙(Decision Rule)</strong> :
+        각 평가기준과 가중치를 결합하여 최종 적합도를 산출하는 방식입니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>4. 비용 기준과 편익 기준</h2>
+
+      <p>
+        입지 적합성 분석에서는 평가기준의 방향을 구분하는 것이 중요합니다.
+      </p>
+
+      <p>
+        <strong>편익 기준(Benefit Criterion)</strong>은 값이 클수록
+        입지 적합성이 높아지는 지표입니다.
+      </p>
+
+      <p>
+        반대로 <strong>비용 기준(Cost Criterion)</strong>은 값이 작을수록
+        적합성이 높아지는 지표입니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>5. 정규화</h2>
+
+      <p>
+        서로 다른 단위와 범위를 가진 평가기준을 직접 비교하기 어렵기 때문에
+        각 지표를 동일한 범위로 변환하는 정규화 과정이 필요합니다.
+      </p>
+
+      <p>
+        실습에서는 Min-Max 정규화를 활용하여 각 평가기준의 값을
+        0과 1 사이의 값으로 변환하고 비교 가능한 형태로 만들었습니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6. WLC</h2>
+
+      <p>
+        WLC(Weighted Linear Combination)는 정규화된 각 평가기준에
+        가중치를 곱한 뒤 모두 합산하여 최종 적합도 점수를 산출하는 방법입니다.
+      </p>
+
+      <p>
+        이를 통해 여러 평가기준을 하나의 종합적인 공간 적합도 값으로
+        통합할 수 있습니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7. 제약조건 적용</h2>
+
+      <p>
+        모든 지역이 실제 후보지가 될 수 있는 것은 아니기 때문에
+        입지 불가능 지역을 제외하는 제약조건을 적용합니다.
+      </p>
+
+      <p>
+        Boolean 방식에서는 적합한 지역을 1,
+        제외해야 하는 지역을 0으로 표현하여 최종 적합도 결과에 적용할 수 있습니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>8. 분석 흐름</h2>
+
+      <p>
+        평가기준 선정 → 데이터 전처리 → 정규화 → 가중치 적용 →
+        WLC 적합도 산출 → 제약조건 적용 → 등급화 → 최종 후보지 선정의
+        순서로 분석을 수행합니다.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>9. 학습 정리</h2>
+
+      <p>
+        입지 적합성 분석은 하나의 조건만을 기준으로 공간을 평가하는 것이 아니라,
+        다양한 공간정보와 의사결정 기준을 통합하여 보다 체계적인
+        입지 선정 결과를 도출하는 분석 방법이라는 점을 학습했습니다.
+      </p>
+
+    </section>
+
+
+    <p>
+      <a href="../index.html#study">← Study Notes로 돌아가기</a>
+    </p>
+
+  </main>
+
+</body>
+</html>
