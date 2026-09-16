@@ -1,0 +1,252 @@
+/* =========================
+   기본 설정
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(32, 201, 151, 0.08), transparent 30%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 35%),
+    #0b1120;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   메인 헤더
+========================= */
+
+header {
+  min-height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 80px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.96),
+      rgba(17, 42, 61, 0.92)
+    );
+}
+
+header::before {
+  content: "GIS  •  AI  •  SPATIAL DATA";
+  display: block;
+
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 700;
+
+  color: #5eead4;
+
+  margin-bottom: 22px;
+}
+
+header h1 {
+  max-width: 950px;
+
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 1.05;
+  font-weight: 800;
+
+  letter-spacing: -3px;
+
+  color: #ffffff;
+
+  margin-bottom: 26px;
+}
+
+header p {
+  max-width: 700px;
+
+  font-size: 18px;
+
+  color: #aebacd;
+}
+
+
+/* =========================
+   본문
+========================= */
+
+main {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  padding: 100px 0;
+}
+
+
+/* =========================
+   섹션 카드
+========================= */
+
+section {
+  position: relative;
+
+  margin-bottom: 35px;
+
+  padding: 42px;
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 22px;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(94, 234, 212, 0.4);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================
+   제목
+========================= */
+
+section h2 {
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+}
+
+section h2::before {
+  content: "";
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  margin-right: 12px;
+  margin-bottom: 4px;
+
+  border-radius: 50%;
+
+  background: #5eead4;
+
+  box-shadow:
+    0 0 15px rgba(94, 234, 212, 0.7);
+}
+
+
+/* =========================
+   본문 텍스트
+========================= */
+
+section p {
+  max-width: 800px;
+
+  font-size: 16px;
+
+  color: #aebacd;
+}
+
+
+/* =========================
+   링크
+========================= */
+
+a {
+  color: #5eead4;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================
+   스크롤바
+========================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5eead4;
+}
+
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 700px) {
+
+  header {
+    min-height: 65vh;
+
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    letter-spacing: -2px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  main {
+    width: 92%;
+
+    padding: 60px 0;
+  }
+
+  section {
+    padding: 28px 24px;
+  }
+
+  section h2 {
+    font-size: 25px;
+  }
+}
